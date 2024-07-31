@@ -22,7 +22,7 @@ export function ProjectCard(projectCardProps: ProjectCardProps) {
                 <CardDescription>{projectCardProps.description}</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-4">
-                <img src="/public/projects/plann_er.jpeg" alt="Project" className="w-full h-40 object-cover" />
+                <img src={projectCardProps.image} alt="Project" className="w-full h-40 object-cover" />
                 <ScrollArea className="w-full whitespace-nowrap rounded-md border">
                     <div className="flex w-max space-x-2 p-2">
                         {projectCardProps.tags.map(tag => {

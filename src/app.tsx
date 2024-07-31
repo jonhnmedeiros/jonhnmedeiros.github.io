@@ -17,38 +17,6 @@ export function App() {
       codeLink: " ",
       liveLink: " ",
     },
-    {
-      title: "Portfolio App",
-      description: "Project Web to show my jobs",
-      image: "/projects/plann_er.jpeg",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      codeLink: " ",
-      liveLink: " ",
-    },
-    {
-      title: "Portfolio App",
-      description: "Project Web to show my jobs",
-      image: "/public/projects/plann_er.jpeg",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      codeLink: " ",
-      liveLink: " ",
-    },
-    {
-      title: "Portfolio App",
-      description: "Project Web to show my jobs",
-      image: "/public/projects/plann_er.jpeg",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      codeLink: " ",
-      liveLink: " ",
-    },
-    {
-      title: "Portfolio App",
-      description: "Project Web to show my jobs",
-      image: "/public/projects/plann_er.jpeg",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      codeLink: " ",
-      liveLink: " ",
-    },
   ];
 
 
