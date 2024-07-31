@@ -12,7 +12,7 @@ export function App() {
     {
       title: "Portfolio App",
       description: "Project Web to show my jobs",
-      image: "/public/projects/plann_er.jpeg",
+      image: "/projects/plann_er.jpeg",
       tags: ["React", "TypeScript", "Tailwind CSS"],
       codeLink: " ",
       liveLink: " ",
@@ -20,7 +20,7 @@ export function App() {
     {
       title: "Portfolio App",
       description: "Project Web to show my jobs",
-      image: "/public/projects/plann_er.jpeg",
+      image: "/projects/plann_er.jpeg",
       tags: ["React", "TypeScript", "Tailwind CSS"],
       codeLink: " ",
       liveLink: " ",
@@ -81,10 +81,10 @@ export function App() {
       <section id="contact" className="h-screen flex items-center justify-center">
         <div className="max-w-3xl w-full px-6 text-center space-y-10">
           <h1 className="text-3xl font-bold">Contact me!</h1>
-          <div className="flex flex-row justify-center space-x-10">
-            <Button variant="outline"><a href="https://www.linkedin.com/in/jonathanmedeiros/" target="_blank" className="flex flex-row gap-2"><LinkedInLogoIcon className="h-[1.2rem] w-[1.2rem]" />LinkedIn</a></Button>
-            <Button variant="outline"><a href="https://github.com/jonhnmedeiros" target="_blank" className="flex flex-row gap-2" ><GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />GitHub</a></Button>
-            <Button variant="outline"><a href="https://www.instagram.com/jonhnmedeiros/" target="_blank" className="flex flex-row gap-2"><InstagramLogoIcon className="h-[1.2rem] w-[1.2rem]" />Instagram</a></Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button className="min-w-32" variant="outline"><a href="https://www.linkedin.com/in/jonathanmedeiros/" target="_blank" className="flex flex-row gap-2"><LinkedInLogoIcon className="h-[1.2rem] w-[1.2rem]" />LinkedIn</a></Button>
+            <Button className="min-w-32" variant="outline"><a href="https://github.com/jonhnmedeiros" target="_blank" className="flex flex-row gap-2" ><GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />GitHub</a></Button>
+            <Button className="min-w-32" variant="outline"><a href="https://www.instagram.com/jonhnmedeiros/" target="_blank" className="flex flex-row gap-2"><InstagramLogoIcon className="h-[1.2rem] w-[1.2rem]" />Instagram</a></Button>
           </div>
 
         </div>
