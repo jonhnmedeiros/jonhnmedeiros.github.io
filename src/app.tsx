@@ -10,13 +10,22 @@ import { ScrollBar } from "./components/ui/scroll-area";
 export function App() {
   const projects = [
     {
-      title: "Portfolio App",
-      description: "Project Web to show my jobs",
-      image: "/projects/plann_er.jpeg",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      codeLink: " ",
-      liveLink: " ",
+      title: "Plann.er",
+      description: "Plann.er helps you to organize and share your trips.",
+      image: "/projects/plann_er.png",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Node.js"],
+      codeLink: "https://github.com/jonhnmedeiros/plann.er",
+      liveLink: "",
     },
+    {
+      title: "Portfolio",
+      description: "Project to show my skills and projects.",
+      image: "/projects/jonathanmedeiros_dev.jpeg",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      codeLink: "https://github.com/jonhnmedeiros/jonhnmedeiros.github.io",
+      liveLink: "https://jonhnmedeiros.github.io/",
+    },
+
   ];
 
 
@@ -32,7 +41,7 @@ export function App() {
         </div>
       </section>
       <section id="projects" className="h-screen flex items-center justify-center">
-        <div className="max-w-5xl w-full px-6 text-center space-y-10">
+        <div className="max-w-6xl w-full px-6 text-center space-y-10">
           <h1 className="text-3xl font-bold">Projects</h1>
 
           <ScrollArea className="w-full whitespace-nowrap">
