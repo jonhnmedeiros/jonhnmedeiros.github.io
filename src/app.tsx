@@ -25,6 +25,22 @@ export function App() {
       codeLink: "https://github.com/jonhnmedeiros/jonhnmedeiros.github.io",
       liveLink: "https://jonhnmedeiros.github.io/",
     },
+    {
+      title: "Test API's",
+      description: "A Project to test and implements API's",
+      image: "/projects/test_api.png",
+      tags: ["Angular", "TypeScript", "NG-ZORRO"],
+      codeLink: "https://github.com/jonhnmedeiros/test_api",
+      liveLink: "https://test-api-seven-beta.vercel.app",
+    },
+    {
+      title: "DevLinks",
+      description: "A landing page to show links and social networks.",
+      image: "/projects/devlinks.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      codeLink: "https://github.com/jonhnmedeiros/devlinks",
+      liveLink: "https://jonhn.dev",
+    },
 
   ];
 
