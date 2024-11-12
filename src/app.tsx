@@ -10,12 +10,12 @@ import { ScrollBar } from "./components/ui/scroll-area";
 export function App() {
   const projects = [
     {
-      title: "Todo Coopers",
-      description: "Project to manage your tasks, with authentication and database.",
+      title: "To-do List Coopers",
+      description: "Manage your tasks, landing page with forms to contact, authentication and database.",
       image: "/projects/coopers-todo.png",
       tags: [ "Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB" ],
-      codeLink: "https://github.com/jonhnmedeiros/coopers-todo",
-      liveLink: "https://coopers-todo.vercel.app",
+      codeLink: "https://github.com/jonhnmedeiros/to-do-coopers",
+      liveLink: "https://to-do-coopers.vercel.app",
     },
     {
       title: "Plann.er",
