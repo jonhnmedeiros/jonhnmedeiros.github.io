@@ -20,7 +20,7 @@ export default function Header() {
                     <div className="col-span-4">
                         <Button variant="link">
                             <a href="/" className="text-end">
-                                <span className="text-black dark:text-white font-thin text-xl">jonathanmedeiros</span><span className="text-primary text-lg">.dev</span>
+                                <span className="text-black dark:text-white font-thin text-xl">jonhn</span><span className="text-primary text-lg">.me</span>
                             </a>
                         </Button>
                     </div>
