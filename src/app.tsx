@@ -10,6 +10,14 @@ import { ScrollBar } from "./components/ui/scroll-area";
 export function App() {
   const projects = [
     {
+      title: "Login Page",
+      description: "A Fullstack project for a login page with authentication and database.",
+      image: "/projects/login_page.png",
+      tags: [ "Angular", "TypeScript", "Node.js", "Java" ],
+      codeLink: "https://github.com/jonhnmedeiros/login-page",
+      liveLink: "https://login-page-bay-one.vercel.app/login",
+    },
+    {
       title: "Region Select",
       description: "A Fullstack project for a test to a company. Region select with a list of cities and states.",
       image: "/projects/region_select.png",
