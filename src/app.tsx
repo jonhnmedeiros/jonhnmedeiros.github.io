@@ -76,7 +76,20 @@ export function App() {
       <section id="about" className="h-screen flex items-center justify-center">
         <div className="max-w-3xl w-full px-6 text-center space-y-10">
           <h1 className="text-3xl font-bold">About me</h1>
-          <p>Hi! I'm Jonathan, I'm passionate about technology and creating solutions. In the last few years I've been specializing as a front end developer and transforming prototypes into reliable, intuitive, dynamic and secure web applications.</p>
+          <p>I’m a Software Analyst and Frontend Developer at NHS, passionate about building scalable web applications with Vue, Nuxt, and Clean Architecture.
+With an MBA in Software Engineering, I combine technical expertise, UX focus, and AI-assisted coding to create innovative and efficient digital solutions.
+Always driven by clean code, performance, and user experience.
+
+⸻
+
+Currently, I design and develop modern applications using Vue, Nuxt, Docker, and AWS, applying Clean Architecture principles to ensure scalability, maintainability, and high performance.
+
+At Serpro Brazil, I contributed to the FGTS Digital project, a platform of national importance, where I implemented a reusable Angular component library and automated monitoring, improving workflow efficiency and system reliability.
+
+As Technology Manager at CWB Tecnologia, I led Help Desk and Service Desk teams for nearly five years, optimizing IT infrastructure, managing cloud migrations (AWS, Azure, and Google Cloud), and improving user satisfaction through a customer-focused approach.
+
+I’m passionate about clean code, UX, documentation, and AI-driven development, creating guides and FAQs that promote knowledge sharing and long-term maintainability.
+With experience in virtualized and containerized environments, I work collaboratively with cross-functional teams to deliver innovative, reliable, and user-centered solutions.</p>
 
         </div>
       </section>
