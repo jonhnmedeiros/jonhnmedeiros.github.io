@@ -297,7 +297,7 @@ export function App() {
               size="lg"
             >
               <a
-                href="https://www.instagram.com/jonhn.me/"
+                href="https://www.instagram.com/jonathan.f.medeiros/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-row gap-2 items-center"
