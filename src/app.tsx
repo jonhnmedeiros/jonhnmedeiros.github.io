@@ -9,84 +9,12 @@ import Header from "./components/layouts/header";
 import { Button } from "./components/ui/button";
 import { ScrollButton } from "./components/ui/scroll-button";
 import { ThemeProvider } from "./providers/theme-provider";
-import { ProjectCard } from "./components/project-card";
-import { ScrollArea } from "./components/ui/scroll-area";
-import { ScrollBar } from "./components/ui/scroll-area";
 
 export function App() {
   useEffect(() => {
     // Enable smooth scrolling
     document.documentElement.style.scrollBehavior = "smooth";
   }, []);
-
-  const projects = [
-    {
-      title: "Login Page",
-      description:
-        "A Fullstack project for a login page with authentication and database.",
-      image: "/projects/login_page.png",
-      tags: ["Angular", "TypeScript", "Node.js", "Java"],
-      codeLink: "https://github.com/jonhnmedeiros/login-page",
-      liveLink: "https://login-page-bay-one.vercel.app/login",
-    },
-    {
-      title: "Region Select",
-      description:
-        "A Fullstack project for a test to a company. Region select with a list of cities and states.",
-      image: "/projects/region_select.png",
-      tags: ["Angular", "TypeScript", "Node.js"],
-      codeLink: "https://github.com/jonhnmedeiros/region_select",
-      liveLink: "https://region-select-alpha.vercel.app/",
-    },
-    {
-      title: "To-do List Coopers",
-      description:
-        "Manage your tasks, landing page with forms to contact, authentication and database.",
-      image: "/projects/coopers-todo.png",
-      tags: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Node.js",
-        "MongoDB",
-      ],
-      codeLink: "https://github.com/jonhnmedeiros/to-do-coopers",
-      liveLink: "https://to-do-coopers.vercel.app",
-    },
-    {
-      title: "Plann.er",
-      description: "Plann.er helps you to organize and share your trips.",
-      image: "/projects/plann_er.png",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Node.js"],
-      codeLink: "https://github.com/jonhnmedeiros/plann.er",
-      liveLink: "",
-    },
-    {
-      title: "Portfolio",
-      description: "Project to show my skills and projects.",
-      image: "/projects/jonathanmedeiros_dev.jpeg",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      codeLink: "https://github.com/jonhnmedeiros/jonhnmedeiros.github.io",
-      liveLink: "https://jonhnmedeiros.github.io/",
-    },
-    {
-      title: "Test API's",
-      description: "A Project to test and implements API's",
-      image: "/projects/test_api.png",
-      tags: ["Angular", "TypeScript", "NG-ZORRO"],
-      codeLink: "https://github.com/jonhnmedeiros/test_api",
-      liveLink: "https://test-api-seven-beta.vercel.app",
-    },
-    {
-      title: "DevLinks",
-      description: "A landing page to show links and social networks.",
-      image: "/projects/devlinks.png",
-      tags: ["HTML", "CSS", "JavaScript"],
-      codeLink: "https://github.com/jonhnmedeiros/devlinks",
-      liveLink: "https://jonhn.dev",
-    },
-  ];
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -239,14 +167,6 @@ export function App() {
 
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-center">Key Projects</h2>
-            {/* <ScrollArea className="w-full whitespace-nowrap rounded-lg">
-              <div className="flex w-max space-x-4 p-4">
-                {projects.map((project, index) => {
-                  return <ProjectCard key={index} {...project} />;
-                })}
-              </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea> */}
             <div className="space-y-4 max-w-3xl mx-auto text-sm text-muted-foreground">
               <p>
                 <strong className="text-foreground">
