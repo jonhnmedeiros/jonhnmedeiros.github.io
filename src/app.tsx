@@ -117,7 +117,7 @@ export function App() {
               size="lg"
               className="min-w-[150px] hover:bg-accent transition-all"
             >
-              <a href="#projects">View Projects</a>
+              <a href="#projects">View my experiences</a>
             </Button>
           </div>
         </div>
@@ -154,14 +154,29 @@ export function App() {
         className="min-h-screen flex items-center justify-center py-20 scroll-mt-20"
       >
         <div className="max-w-6xl w-full px-6 space-y-12">
-          <div className="text-center space-y-4">
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Experience & Projects
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Over the years, I've had the privilege to work on diverse projects
-              that have honed my skills and expanded my expertise.
-            </p>
+          <div className="text-center space-y-6">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold">
+                Experience & Projects
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+                Over the years, I've had the privilege to work on diverse
+                projects that have honed my skills and expanded my expertise.
+              </p>
+            </div>
+            <Button
+              variant="default"
+              size="lg"
+              className="shadow-md hover:shadow-lg transition-all"
+            >
+              <a
+                href="/Jonathan_Medeiros_CV.pdf"
+                download="Jonathan_Medeiros_CV.pdf"
+                className="flex items-center gap-2"
+              >
+                📄 Download CV
+              </a>
+            </Button>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-left">
