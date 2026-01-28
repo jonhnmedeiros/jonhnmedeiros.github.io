@@ -1,4 +1,9 @@
-import { LinkedInLogoIcon, GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
+import {
+  LinkedInLogoIcon,
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+} from "@radix-ui/react-icons";
+import { useEffect } from "react";
 
 import Header from "./components/layouts/header";
 import { Button } from "./components/ui/button";
@@ -8,28 +13,43 @@ import { ScrollArea } from "./components/ui/scroll-area";
 import { ScrollBar } from "./components/ui/scroll-area";
 
 export function App() {
+  useEffect(() => {
+    // Enable smooth scrolling
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
+
   const projects = [
     {
       title: "Login Page",
-      description: "A Fullstack project for a login page with authentication and database.",
+      description:
+        "A Fullstack project for a login page with authentication and database.",
       image: "/projects/login_page.png",
-      tags: [ "Angular", "TypeScript", "Node.js", "Java" ],
+      tags: ["Angular", "TypeScript", "Node.js", "Java"],
       codeLink: "https://github.com/jonhnmedeiros/login-page",
       liveLink: "https://login-page-bay-one.vercel.app/login",
     },
     {
       title: "Region Select",
-      description: "A Fullstack project for a test to a company. Region select with a list of cities and states.",
+      description:
+        "A Fullstack project for a test to a company. Region select with a list of cities and states.",
       image: "/projects/region_select.png",
-      tags: [ "Angular", "TypeScript", "Node.js" ],
+      tags: ["Angular", "TypeScript", "Node.js"],
       codeLink: "https://github.com/jonhnmedeiros/region_select",
       liveLink: "https://region-select-alpha.vercel.app/",
     },
     {
       title: "To-do List Coopers",
-      description: "Manage your tasks, landing page with forms to contact, authentication and database.",
+      description:
+        "Manage your tasks, landing page with forms to contact, authentication and database.",
       image: "/projects/coopers-todo.png",
-      tags: [ "Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB" ],
+      tags: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+      ],
       codeLink: "https://github.com/jonhnmedeiros/to-do-coopers",
       liveLink: "https://to-do-coopers.vercel.app",
     },
@@ -65,60 +85,218 @@ export function App() {
       codeLink: "https://github.com/jonhnmedeiros/devlinks",
       liveLink: "https://jonhn.dev",
     },
-
   ];
-
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Header />
-
-      <section id="about" className="h-screen flex items-center justify-center">
-        <div className="max-w-3xl w-full px-6 text-center space-y-10">
-          <h1 className="text-3xl font-bold">About me</h1>
-          <p>I’m a Software Analyst and Frontend Developer at NHS, passionate about building scalable web applications with Vue, Nuxt, and Clean Architecture.
-With an MBA in Software Engineering, I combine technical expertise, UX focus, and AI-assisted coding to create innovative and efficient digital solutions.
-Always driven by clean code, performance, and user experience.
-
-⸻
-
-Currently, I design and develop modern applications using Vue, Nuxt, Docker, and AWS, applying Clean Architecture principles to ensure scalability, maintainability, and high performance.
-
-At Serpro Brazil, I contributed to the FGTS Digital project, a platform of national importance, where I implemented a reusable Angular component library and automated monitoring, improving workflow efficiency and system reliability.
-
-As Technology Manager at CWB Tecnologia, I led Help Desk and Service Desk teams for nearly five years, optimizing IT infrastructure, managing cloud migrations (AWS, Azure, and Google Cloud), and improving user satisfaction through a customer-focused approach.
-
-I’m passionate about clean code, UX, documentation, and AI-driven development, creating guides and FAQs that promote knowledge sharing and long-term maintainability.
-With experience in virtualized and containerized environments, I work collaboratively with cross-functional teams to deliver innovative, reliable, and user-centered solutions.</p>
-
+      <section className="min-h-screen flex items-center justify-center pt-20 pb-10">
+        <div className="max-w-3xl w-full px-6 text-center space-y-8 animate-in fade-in duration-700">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent animate-in slide-in-from-bottom-4 duration-700">
+            Hi, I'm Jonathan Medeiros
+          </h1>
+          <h2 className="text-xl md:text-3xl font-semibold text-muted-foreground animate-in slide-in-from-bottom-4 duration-700 delay-150">
+            Senior Software Engineer & Frontend Specialist
+          </h2>
+          <p className="text-base md:text-lg leading-relaxed animate-in slide-in-from-bottom-4 duration-700 delay-300">
+            Specializing in high-performance frontend ecosystems (Vue, Nuxt,
+            Svelte) and currently expanding into React/Next.js. Proven
+            experience in national-scale platforms and asynchronous,
+            remote-first environments.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap animate-in slide-in-from-bottom-4 duration-700 delay-500">
+            <Button
+              variant="default"
+              size="lg"
+              className="min-w-[150px] shadow-lg hover:shadow-xl transition-all"
+            >
+              <a href="#contact">Get in touch</a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="min-w-[150px] hover:bg-accent transition-all"
+            >
+              <a href="#projects">View Projects</a>
+            </Button>
+          </div>
         </div>
       </section>
-      <section id="projects" className="h-screen flex items-center justify-center">
-        <div className="max-w-6xl w-full px-6 text-center space-y-10">
-          <h1 className="text-3xl font-bold">Projects</h1>
 
-          <ScrollArea className="w-full whitespace-nowrap">
-            <div className="flex w-max space-x-2 p-2">
-              {projects.map((project) => {
-                return (<ProjectCard {...project} />)
-              })}
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
-
+      <section
+        id="about"
+        className="min-h-screen flex items-center justify-center py-20 scroll-mt-20"
+      >
+        <div className="max-w-4xl w-full px-6 space-y-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-center">
+            About me
+          </h1>
+          <div className="space-y-6">
+            <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
+              With over{" "}
+              <span className="font-semibold text-primary">
+                8 years of experience
+              </span>{" "}
+              in the tech industry, I've transitioned from Technology Management
+              to high-level Software Engineering. My expertise lies in the
+              Vue/Nuxt ecosystem and TypeScript, with a solid foundation in
+              building national-scale platforms like FGTS Digital.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
+              I am a firm believer in asynchronous work, continuous learning,
+              and the power of clean, maintainable code.
+            </p>
+          </div>
         </div>
       </section>
-      <section id="contact" className="h-screen flex items-center justify-center">
-        <div className="max-w-3xl w-full px-6 text-center space-y-10">
-          <h1 className="text-3xl font-bold">Contact me!</h1>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="min-w-32" variant="outline"><a href="https://www.linkedin.com/in/jonathanmedeiros/" target="_blank" className="flex flex-row gap-2"><LinkedInLogoIcon className="h-[1.2rem] w-[1.2rem]" />LinkedIn</a></Button>
-            <Button className="min-w-32" variant="outline"><a href="https://github.com/jonhnmedeiros" target="_blank" className="flex flex-row gap-2" ><GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />GitHub</a></Button>
-            <Button className="min-w-32" variant="outline"><a href="https://www.instagram.com/jonhn.me/" target="_blank" className="flex flex-row gap-2"><InstagramLogoIcon className="h-[1.2rem] w-[1.2rem]" />Instagram</a></Button>
+      <section
+        id="projects"
+        className="min-h-screen flex items-center justify-center py-20 scroll-mt-20"
+      >
+        <div className="max-w-6xl w-full px-6 space-y-12">
+          <div className="text-center space-y-4">
+            <h1 className="text-3xl md:text-4xl font-bold">
+              Experience & Projects
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+              Over the years, I've had the privilege to work on diverse projects
+              that have honed my skills and expanded my expertise.
+            </p>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-all">
+              <h3 className="font-semibold text-lg mb-2 text-primary">
+                NHS (Present)
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Leading frontend initiatives with Vue 3 and Nuxt, optimizing
+                workflows through AI-driven development.
+              </p>
+            </div>
+            <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-all">
+              <h3 className="font-semibold text-lg mb-2 text-primary">
+                Axon Technology
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Architected responsive interfaces with Svelte, achieving a 50%
+                boost in user engagement.
+              </p>
+            </div>
+            <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-all">
+              <h3 className="font-semibold text-lg mb-2 text-primary">
+                Serpro (FGTS Digital)
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Contributed to a high-impact national platform, developing a
+                reusable component library used by millions of Brazilian
+                citizens.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-2xl font-semibold text-center">Skills</h2>
+            <div className="grid md:grid-cols-3 gap-4 text-center">
+              <div className="p-4 rounded-lg bg-muted">
+                <h3 className="font-semibold mb-2">Frontend</h3>
+                <p className="text-sm text-muted-foreground">
+                  Vue, Nuxt, React, TypeScript, Svelte
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-muted">
+                <h3 className="font-semibold mb-2">DevOps</h3>
+                <p className="text-sm text-muted-foreground">
+                  Docker, AWS, CI/CD
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-muted">
+                <h3 className="font-semibold mb-2">Soft Skills</h3>
+                <p className="text-sm text-muted-foreground">
+                  Async Communication, Self-guided work, Technical Leadership
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-2xl font-semibold text-center">
+              Featured Projects
+            </h2>
+            <ScrollArea className="w-full whitespace-nowrap rounded-lg">
+              <div className="flex w-max space-x-4 p-4">
+                {projects.map((project, index) => {
+                  return <ProjectCard key={index} {...project} />;
+                })}
+              </div>
+              <ScrollBar orientation="horizontal" />
+            </ScrollArea>
+          </div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        className="min-h-screen flex items-center justify-center py-20 scroll-mt-20"
+      >
+        <div className="max-w-3xl w-full px-6 text-center space-y-8">
+          <div className="space-y-4">
+            <h1 className="text-3xl md:text-4xl font-bold">Let's Connect!</h1>
+            <p className="text-muted-foreground">
+              Feel free to reach out on any of these platforms
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
+              variant="outline"
+              size="lg"
+            >
+              <a
+                href="https://www.linkedin.com/in/jonathanmedeiros/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-2 items-center"
+              >
+                <LinkedInLogoIcon className="h-5 w-5" />
+                LinkedIn
+              </a>
+            </Button>
+            <Button
+              className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
+              variant="outline"
+              size="lg"
+            >
+              <a
+                href="https://github.com/jonhnmedeiros"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-2 items-center"
+              >
+                <GitHubLogoIcon className="h-5 w-5" />
+                GitHub
+              </a>
+            </Button>
+            <Button
+              className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
+              variant="outline"
+              size="lg"
+            >
+              <a
+                href="https://www.instagram.com/jonhn.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-2 items-center"
+              >
+                <InstagramLogoIcon className="h-5 w-5" />
+                Instagram
+              </a>
+            </Button>
+          </div>
+          <div className="pt-8 text-sm text-muted-foreground border-t">
+            <p>© 2026 Jonathan Medeiros. Built with React & Tailwind CSS</p>
+          </div>
         </div>
       </section>
     </ThemeProvider>
-  )
+  );
 }
