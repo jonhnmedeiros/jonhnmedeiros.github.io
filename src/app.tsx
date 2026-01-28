@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 import Header from "./components/layouts/header";
 import { Button } from "./components/ui/button";
+import { ScrollButton } from "./components/ui/scroll-button";
 import { ThemeProvider } from "./providers/theme-provider";
 import { ProjectCard } from "./components/project-card";
 import { ScrollArea } from "./components/ui/scroll-area";
@@ -105,20 +106,22 @@ export function App() {
             remote-first environments.
           </p>
           <div className="flex gap-4 justify-center flex-wrap animate-in slide-in-from-bottom-4 duration-700 delay-500">
-            <Button
+            <ScrollButton
+              scrollTo="#contact"
               variant="default"
               size="lg"
               className="min-w-[150px] shadow-lg hover:shadow-xl transition-all"
             >
-              <a href="#contact">Get in touch</a>
-            </Button>
-            <Button
+              Get in touch
+            </ScrollButton>
+            <ScrollButton
+              scrollTo="#projects"
               variant="outline"
               size="lg"
               className="min-w-[150px] hover:bg-accent transition-all"
             >
-              <a href="#projects">View my experiences</a>
-            </Button>
+              View my experiences
+            </ScrollButton>
           </div>
         </div>
       </section>
@@ -235,17 +238,39 @@ export function App() {
           </div>
 
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-center">
-              Featured Projects
-            </h2>
-            <ScrollArea className="w-full whitespace-nowrap rounded-lg">
+            <h2 className="text-2xl font-semibold text-center">Key Projects</h2>
+            {/* <ScrollArea className="w-full whitespace-nowrap rounded-lg">
               <div className="flex w-max space-x-4 p-4">
                 {projects.map((project, index) => {
                   return <ProjectCard key={index} {...project} />;
                 })}
               </div>
               <ScrollBar orientation="horizontal" />
-            </ScrollArea>
+            </ScrollArea> */}
+            <div className="space-y-4 max-w-3xl mx-auto text-sm text-muted-foreground">
+              <p>
+                <strong className="text-foreground">
+                  Enterprise Financial Platform (FGTS Digital):
+                </strong>{" "}
+                Scalable Angular architecture serving millions of users
+                nationwide. Focused on accessibility and high-performance design
+                systems.
+              </p>
+              <p>
+                <strong className="text-foreground">
+                  Modern Web Ecosystems (NHS):
+                </strong>{" "}
+                Leading frontend development with Vue 3 and Nuxt, leveraging
+                AI-assisted coding to optimize delivery and maintainability.
+              </p>
+              <p>
+                <strong className="text-foreground">
+                  High-Performance Interfaces (Axon):
+                </strong>{" "}
+                Architecture of Svelte-based applications with a 50% increase in
+                user engagement through UX optimization.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -261,51 +286,33 @@ export function App() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
+            <ScrollButton
+              href="https://www.linkedin.com/in/jonathanmedeiros/"
               variant="outline"
               size="lg"
-            >
-              <a
-                href="https://www.linkedin.com/in/jonathanmedeiros/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-row gap-2 items-center"
-              >
-                <LinkedInLogoIcon className="h-5 w-5" />
-                LinkedIn
-              </a>
-            </Button>
-            <Button
               className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
+            >
+              <LinkedInLogoIcon className="h-5 w-5 mr-1" />
+              LinkedIn
+            </ScrollButton>
+            <ScrollButton
+              href="https://github.com/jonhnmedeiros"
               variant="outline"
               size="lg"
-            >
-              <a
-                href="https://github.com/jonhnmedeiros"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-row gap-2 items-center"
-              >
-                <GitHubLogoIcon className="h-5 w-5" />
-                GitHub
-              </a>
-            </Button>
-            <Button
               className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
+            >
+              <GitHubLogoIcon className="h-5 w-5 mr-1" />
+              GitHub
+            </ScrollButton>
+            <ScrollButton
+              href="https://www.instagram.com/jonathan.f.medeiros/"
               variant="outline"
               size="lg"
+              className="min-w-[140px] shadow-md hover:shadow-lg transition-all"
             >
-              <a
-                href="https://www.instagram.com/jonathan.f.medeiros/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-row gap-2 items-center"
-              >
-                <InstagramLogoIcon className="h-5 w-5" />
-                Instagram
-              </a>
-            </Button>
+              <InstagramLogoIcon className="h-5 w-5 mr-1" />
+              Instagram
+            </ScrollButton>
           </div>
           <div className="pt-8 text-sm text-muted-foreground border-t">
             <p>© 2026 Jonathan Medeiros. Built with React & Tailwind CSS</p>

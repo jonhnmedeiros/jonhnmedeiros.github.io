@@ -2,6 +2,7 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { ScrollButton } from "@/components/ui/scroll-button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,24 +14,6 @@ import { useTheme } from "@/providers/theme-provider";
 export default function Header() {
   const { setTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 80;
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <header className="fixed z-50 top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b shadow-sm">
@@ -49,30 +32,27 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
-          <Button
+          <ScrollButton
+            scrollTo="#about"
             variant="ghost"
             className="text-foreground hover:text-primary transition-colors"
           >
-            <a href="#about" onClick={(e) => handleNavClick(e, "#about")}>
-              About me
-            </a>
-          </Button>
-          <Button
+            About me
+          </ScrollButton>
+          <ScrollButton
+            scrollTo="#projects"
             variant="ghost"
             className="text-foreground hover:text-primary transition-colors"
           >
-            <a href="#projects" onClick={(e) => handleNavClick(e, "#projects")}>
-              Experience
-            </a>
-          </Button>
-          <Button
+            Experience
+          </ScrollButton>
+          <ScrollButton
+            scrollTo="#contact"
             variant="ghost"
             className="text-foreground hover:text-primary transition-colors"
           >
-            <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-              Contact
-            </a>
-          </Button>
+            Contact
+          </ScrollButton>
         </nav>
 
         {/* Right Side Actions */}
@@ -119,42 +99,30 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-background/95 backdrop-blur-md">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            <Button
+            <ScrollButton
+              scrollTo="#about"
               variant="ghost"
               className="w-full justify-start text-foreground hover:text-primary hover:bg-accent"
+              onNavigate={() => setMobileMenuOpen(false)}
             >
-              <a
-                href="#about"
-                onClick={(e) => handleNavClick(e, "#about")}
-                className="w-full text-left"
-              >
-                About
-              </a>
-            </Button>
-            <Button
+              About
+            </ScrollButton>
+            <ScrollButton
+              scrollTo="#projects"
               variant="ghost"
               className="w-full justify-start text-foreground hover:text-primary hover:bg-accent"
+              onNavigate={() => setMobileMenuOpen(false)}
             >
-              <a
-                href="#projects"
-                onClick={(e) => handleNavClick(e, "#projects")}
-                className="w-full text-left"
-              >
-                Experience
-              </a>
-            </Button>
-            <Button
+              Experience
+            </ScrollButton>
+            <ScrollButton
+              scrollTo="#contact"
               variant="ghost"
               className="w-full justify-start text-foreground hover:text-primary hover:bg-accent"
+              onNavigate={() => setMobileMenuOpen(false)}
             >
-              <a
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "#contact")}
-                className="w-full text-left"
-              >
-                Contact
-              </a>
-            </Button>
+              Contact
+            </ScrollButton>
           </nav>
         </div>
       )}
