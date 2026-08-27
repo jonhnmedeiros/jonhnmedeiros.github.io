@@ -6,9 +6,37 @@ import {
 import { useEffect } from "react";
 
 import Header from "./components/layouts/header";
+import { ProjectCard } from "./components/project-card";
 import { Button } from "./components/ui/button";
 import { ScrollButton } from "./components/ui/scroll-button";
 import { ThemeProvider } from "./providers/theme-provider";
+
+const personalProjects = [
+  {
+    title: "Reaper Strike Co.",
+    description:
+      "E-commerce artesanal de molhos de pimenta ultra-picantes, com catálogo, carrinho e checkout via Mercado Pago.",
+    image: "/projects/reaper-strike-co.jpg",
+    tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Mercado Pago"],
+    codeLink: "https://github.com/jonhnmedeiros/reaper-strike-co",
+    liveLink: "",
+  },
+  {
+    title: "FinTrack",
+    description:
+      "Controle financeiro pessoal com módulo de investimentos (ações, FIIs, cripto) e suporte multi-usuário.",
+    image: "/projects/fintrack.jpg",
+    tags: [
+      "TanStack Start",
+      "TanStack Router/Query",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth",
+    ],
+    codeLink: "https://github.com/jonhnmedeiros/fintrack",
+    liveLink: "",
+  },
+];
 
 export function App() {
   useEffect(() => {
@@ -91,8 +119,8 @@ export function App() {
                 Experience & Projects
               </h1>
               <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Over the years, I've had the privilege to work on diverse
-                projects that have honed my skills and expanded my expertise.
+                Professional experience across national-scale platforms, plus
+                personal products I'm building and shipping on my own.
               </p>
             </div>
             <Button
@@ -190,6 +218,21 @@ export function App() {
                 Architecture of Svelte-based applications with a 50% increase in
                 user engagement through UX optimization.
               </p>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-2xl font-semibold text-center">
+              Personal Projects
+            </h2>
+            <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto">
+              Side projects I build and maintain on my own time to explore new
+              stacks end-to-end, from database to UI.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              {personalProjects.map((project) => (
+                <ProjectCard key={project.title} {...project} />
+              ))}
             </div>
           </div>
         </div>
