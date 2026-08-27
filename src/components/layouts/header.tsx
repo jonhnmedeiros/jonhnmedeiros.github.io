@@ -1,4 +1,4 @@
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, Languages } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -9,10 +9,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/providers/language-provider";
 import { useTheme } from "@/providers/theme-provider";
 
 export default function Header() {
   const { setTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -37,26 +39,53 @@ export default function Header() {
             variant="ghost"
             className="text-foreground hover:text-primary transition-colors"
           >
-            About me
+            {t.nav.about}
           </ScrollButton>
           <ScrollButton
             scrollTo="#projects"
             variant="ghost"
             className="text-foreground hover:text-primary transition-colors"
           >
-            Experience
+            {t.nav.experience}
           </ScrollButton>
           <ScrollButton
             scrollTo="#contact"
             variant="ghost"
             className="text-foreground hover:text-primary transition-colors"
           >
-            Contact
+            {t.nav.contact}
           </ScrollButton>
         </nav>
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-accent"
+                aria-label="Toggle language"
+              >
+                <Languages className="h-5 w-5" />
+                <span className="sr-only">Toggle language</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem
+                onClick={() => setLanguage("en")}
+                className={language === "en" ? "font-semibold" : undefined}
+              >
+                🇺🇸 English
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => setLanguage("pt")}
+                className={language === "pt" ? "font-semibold" : undefined}
+              >
+                🇧🇷 Português
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="hover:bg-accent">
@@ -105,7 +134,7 @@ export default function Header() {
               className="w-full justify-start text-foreground hover:text-primary hover:bg-accent"
               onNavigate={() => setMobileMenuOpen(false)}
             >
-              About
+              {t.nav.aboutShort}
             </ScrollButton>
             <ScrollButton
               scrollTo="#projects"
@@ -113,7 +142,7 @@ export default function Header() {
               className="w-full justify-start text-foreground hover:text-primary hover:bg-accent"
               onNavigate={() => setMobileMenuOpen(false)}
             >
-              Experience
+              {t.nav.experience}
             </ScrollButton>
             <ScrollButton
               scrollTo="#contact"
@@ -121,7 +150,7 @@ export default function Header() {
               className="w-full justify-start text-foreground hover:text-primary hover:bg-accent"
               onNavigate={() => setMobileMenuOpen(false)}
             >
-              Contact
+              {t.nav.contact}
             </ScrollButton>
           </nav>
         </div>

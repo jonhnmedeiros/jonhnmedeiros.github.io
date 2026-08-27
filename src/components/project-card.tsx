@@ -17,6 +17,7 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   liveLink: string;
+  visitLabel?: string;
 }
 
 export function ProjectCard(projectCardProps: ProjectCardProps) {
@@ -72,7 +73,7 @@ export function ProjectCard(projectCardProps: ProjectCardProps) {
               );
             }}
           >
-            Visit
+            {projectCardProps.visitLabel ?? "Visit"}
           </Button>
         </CardFooter>
       )}
