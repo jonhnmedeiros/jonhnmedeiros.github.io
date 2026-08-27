@@ -16,7 +16,6 @@ interface ProjectCardProps {
   description: string;
   image: string;
   tags: string[];
-  codeLink: string;
   liveLink: string;
 }
 
@@ -60,22 +59,8 @@ export function ProjectCard(projectCardProps: ProjectCardProps) {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </CardContent>
-      <CardFooter className="gap-2">
-        <Button
-          className="w-full hover:shadow-md transition-all"
-          variant="outline"
-          onClick={(e) => {
-            e.preventDefault();
-            window.open(
-              projectCardProps.codeLink,
-              "_blank",
-              "noopener,noreferrer",
-            );
-          }}
-        >
-          Code
-        </Button>
-        {hasLiveLink && (
+      {hasLiveLink && (
+        <CardFooter className="gap-2">
           <Button
             className="w-full hover:shadow-md transition-all"
             onClick={(e) => {
@@ -87,10 +72,10 @@ export function ProjectCard(projectCardProps: ProjectCardProps) {
               );
             }}
           >
-            Live
+            Visit
           </Button>
-        )}
-      </CardFooter>
+        </CardFooter>
+      )}
     </Card>
   );
 }

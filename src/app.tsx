@@ -18,8 +18,7 @@ const personalProjects = [
       "E-commerce artesanal de molhos de pimenta ultra-picantes, com catálogo, carrinho e checkout via Mercado Pago.",
     image: "/projects/reaper-strike-co.jpg",
     tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Mercado Pago"],
-    codeLink: "https://github.com/jonhnmedeiros/reaper-strike-co",
-    liveLink: "",
+    liveLink: "https://reaper-strike-co.vercel.app/",
   },
   {
     title: "FinTrack",
@@ -33,8 +32,7 @@ const personalProjects = [
       "PostgreSQL",
       "NextAuth",
     ],
-    codeLink: "https://github.com/jonhnmedeiros/fintrack",
-    liveLink: "",
+    liveLink: "https://fintrack-beta-liard.vercel.app/",
   },
 ];
 
@@ -144,8 +142,11 @@ export function App() {
                 NHS (Present)
               </h3>
               <p className="text-sm text-muted-foreground">
-                Leading frontend initiatives with Vue 3 and Nuxt, optimizing
-                workflows through AI-driven development.
+                Leading frontend across the EnergiView ecosystem for NHS
+                Energia: a Quasar/Capacitor mobile app for inverter and
+                nobreak monitoring, a React admin dashboard, and a Nuxt 4
+                landing page — architecture decisions and AI-assisted
+                delivery included.
               </p>
             </div>
             <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-all">
@@ -206,10 +207,17 @@ export function App() {
               </p>
               <p>
                 <strong className="text-foreground">
-                  Modern Web Ecosystems (NHS):
+                  EnergiView Ecosystem (NHS Energia):
                 </strong>{" "}
-                Leading frontend development with Vue 3 and Nuxt, leveraging
-                AI-assisted coding to optimize delivery and maintainability.
+                Frontend architecture and development across four
+                interconnected products: a Quasar/Capacitor mobile app
+                (Android/iOS) for real-time monitoring of solar inverters and
+                nobreaks; a React 19 + TanStack Query admin dashboard with
+                Leaflet-based device mapping; a Quasar admin panel for
+                managing devices, users and organizations, covered by
+                Playwright E2E tests; and a Nuxt 4 marketing landing page
+                deployed on AWS Lambda. AI-assisted workflows used throughout
+                to optimize delivery and maintainability.
               </p>
               <p>
                 <strong className="text-foreground">
