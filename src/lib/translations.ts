@@ -10,9 +10,9 @@ export const translations = {
     },
     hero: {
       greeting: "Hi, I'm Jonathan Medeiros",
-      role: "Senior Software Engineer & Frontend Specialist",
+      role: "Software Engineer & Frontend Specialist",
       description:
-        "Specializing in high-performance frontend ecosystems (Vue, Nuxt, Svelte) and currently expanding into React/Next.js. Proven experience in national-scale platforms and asynchronous, remote-first environments.",
+        "Specializing in modern frontend ecosystems — Vue, Nuxt, React, Next.js, Angular, Svelte and TanStack. Proven experience in national-scale platforms and asynchronous, remote-first environments.",
       ctaContact: "Get in touch",
       ctaProjects: "View my experiences",
     },
@@ -21,7 +21,7 @@ export const translations = {
       yearsBold: "8 years of experience",
       p1Prefix: "With over",
       p1Suffix:
-        "in the tech industry, I've transitioned from Technology Management to high-level Software Engineering. My expertise lies in the Vue/Nuxt ecosystem and TypeScript, with a solid foundation in building national-scale platforms like FGTS Digital.",
+        "in the tech industry, I've transitioned from Technology Management to high-level Software Engineering. My expertise spans Vue/Nuxt, React/Next.js, Angular and TypeScript, with a solid foundation in building national-scale platforms like FGTS Digital.",
       p2: "I am a firm believer in asynchronous work, continuous learning, and the power of clean, maintainable code.",
     },
     experience: {
@@ -35,15 +35,18 @@ export const translations = {
       },
       axon: {
         title: "Axon Technology",
-        desc: "Architected responsive interfaces with Svelte, achieving a 50% boost in user engagement.",
+        desc: "Built SvelteKit frontends for two manufacturing-management products: Andon, a factory floor issue-alert system, and AxonNext, a broader platform for parts, technical drawings, and production orders — both backed by NestJS and Keycloak SSO.",
       },
       serpro: {
-        title: "Serpro (FGTS Digital)",
-        desc: "Contributed to a high-impact national platform, developing a reusable component library used by millions of Brazilian citizens.",
+        title: "Serpro (FGTS Digital & CNES)",
+        desc: "Contributed to high-impact national platforms: an Angular component library implementing Brazil's Federal Government Design System, plus frontends for FGTS Digital's collections system and CNES, the national healthcare facility registry.",
       },
       skills: {
         title: "Skills",
-        frontend: { title: "Frontend", desc: "Vue, Nuxt, React, TypeScript, Svelte" },
+        frontend: {
+          title: "Frontend",
+          desc: "Vue, Nuxt, React, Next.js, Angular, Svelte, TypeScript, TanStack",
+        },
         devops: { title: "DevOps", desc: "Docker, AWS, CI/CD" },
         soft: {
           title: "Soft Skills",
@@ -53,16 +56,16 @@ export const translations = {
       keyProjects: {
         title: "Key Projects",
         fgts: {
-          title: "Enterprise Financial Platform (FGTS Digital):",
-          desc: "Scalable Angular architecture serving millions of users nationwide. Focused on accessibility and high-performance design systems.",
+          title: "Government Platforms (Serpro):",
+          desc: "Built ngx-dsgovbr, an Angular component library implementing Brazil's Federal Government Design System, reused across multiple Serpro products. Also developed Angular frontends for FGTS Digital's collections system (operational and management views) and for CNES, the national healthcare facility registry — all serving millions of users nationwide with a focus on accessibility.",
         },
         energiview: {
           title: "EnergiView Ecosystem (NHS Energia):",
           desc: "Frontend architecture and development across four interconnected products: a Quasar/Capacitor mobile app (Android/iOS) for real-time monitoring of solar inverters and nobreaks; a React 19 + TanStack Query admin dashboard with Leaflet-based device mapping; a Quasar admin panel for managing devices, users and organizations, covered by Playwright E2E tests; and a Nuxt 4 marketing landing page deployed on AWS Lambda. AI-assisted workflows used throughout to optimize delivery and maintainability.",
         },
         axon: {
-          title: "High-Performance Interfaces (Axon):",
-          desc: "Architecture of Svelte-based applications with a 50% increase in user engagement through UX optimization.",
+          title: "Manufacturing Platforms (Axon):",
+          desc: "Built the SvelteKit frontend for Andon, a factory floor issue-alert and request-tracking system with Keycloak SSO, and for AxonNext, a broader manufacturing-management platform covering indexed parts, technical drawings, production-order printing, simulations and history — both backed by NestJS APIs.",
         },
       },
       personal: {
@@ -93,9 +96,9 @@ export const translations = {
     },
     hero: {
       greeting: "Olá, eu sou Jonathan Medeiros",
-      role: "Engenheiro de Software Sênior & Especialista Frontend",
+      role: "Engenheiro de Software & Especialista Frontend",
       description:
-        "Especializado em ecossistemas frontend de alta performance (Vue, Nuxt, Svelte) e atualmente expandindo para React/Next.js. Experiência comprovada em plataformas de escala nacional e ambientes assíncronos e remotos.",
+        "Especializado em ecossistemas frontend modernos — Vue, Nuxt, React, Next.js, Angular, Svelte e TanStack. Experiência comprovada em plataformas de escala nacional e ambientes assíncronos e remotos.",
       ctaContact: "Entre em contato",
       ctaProjects: "Ver minhas experiências",
     },
@@ -104,7 +107,7 @@ export const translations = {
       yearsBold: "8 anos de experiência",
       p1Prefix: "Com mais de",
       p1Suffix:
-        "na indústria de tecnologia, migrei de Gestão de Tecnologia para Engenharia de Software de alto nível. Minha expertise está no ecossistema Vue/Nuxt e TypeScript, com uma base sólida na construção de plataformas de escala nacional como o FGTS Digital.",
+        "na indústria de tecnologia, migrei de Gestão de Tecnologia para Engenharia de Software de alto nível. Minha expertise abrange Vue/Nuxt, React/Next.js, Angular e TypeScript, com uma base sólida na construção de plataformas de escala nacional como o FGTS Digital.",
       p2: "Acredito firmemente no trabalho assíncrono, no aprendizado contínuo e no poder de um código limpo e sustentável.",
     },
     experience: {
@@ -118,15 +121,18 @@ export const translations = {
       },
       axon: {
         title: "Axon Technology",
-        desc: "Arquitetei interfaces responsivas com Svelte, alcançando um aumento de 50% no engajamento dos usuários.",
+        desc: "Desenvolvi os frontends em SvelteKit de dois produtos de gestão industrial: o Andon, sistema de alertas e chamados de linha de produção, e o AxonNext, uma plataforma mais ampla para peças, desenhos técnicos e ordens de fabricação — ambos com backend em NestJS e SSO via Keycloak.",
       },
       serpro: {
-        title: "Serpro (FGTS Digital)",
-        desc: "Contribuí para uma plataforma nacional de alto impacto, desenvolvendo uma biblioteca de componentes reutilizável usada por milhões de cidadãos brasileiros.",
+        title: "Serpro (FGTS Digital & CNES)",
+        desc: "Contribuí para plataformas nacionais de alto impacto: uma biblioteca de componentes Angular implementando o Design System do Governo Federal, além de frontends para o sistema de cobrança do FGTS Digital e para o CNES, o cadastro nacional de estabelecimentos de saúde.",
       },
       skills: {
         title: "Habilidades",
-        frontend: { title: "Frontend", desc: "Vue, Nuxt, React, TypeScript, Svelte" },
+        frontend: {
+          title: "Frontend",
+          desc: "Vue, Nuxt, React, Next.js, Angular, Svelte, TypeScript, TanStack",
+        },
         devops: { title: "DevOps", desc: "Docker, AWS, CI/CD" },
         soft: {
           title: "Habilidades Interpessoais",
@@ -136,16 +142,16 @@ export const translations = {
       keyProjects: {
         title: "Principais Projetos",
         fgts: {
-          title: "Plataforma Financeira Corporativa (FGTS Digital):",
-          desc: "Arquitetura Angular escalável atendendo milhões de usuários em todo o país. Foco em acessibilidade e design systems de alta performance.",
+          title: "Plataformas Governamentais (Serpro):",
+          desc: "Desenvolvi o ngx-dsgovbr, uma biblioteca de componentes Angular que implementa o Design System do Governo Federal, reutilizada em diversos produtos do Serpro. Também desenvolvi frontends em Angular para o sistema de cobrança do FGTS Digital (visões operacional e gerencial) e para o CNES, o cadastro nacional de estabelecimentos de saúde — atendendo milhões de usuários em todo o país, com foco em acessibilidade.",
         },
         energiview: {
           title: "Ecossistema EnergiView (NHS Energia):",
           desc: "Arquitetura e desenvolvimento de frontend em quatro produtos interligados: um app mobile em Quasar/Capacitor (Android/iOS) para monitoramento em tempo real de inversores solares e nobreaks; um dashboard admin em React 19 + TanStack Query com mapeamento de dispositivos via Leaflet; um painel admin em Quasar para gestão de dispositivos, usuários e organizações, coberto por testes E2E com Playwright; e uma landing page institucional em Nuxt 4 hospedada na AWS Lambda. Fluxos de trabalho assistidos por IA usados durante todo o processo para otimizar entrega e manutenibilidade.",
         },
         axon: {
-          title: "Interfaces de Alta Performance (Axon):",
-          desc: "Arquitetura de aplicações baseadas em Svelte com um aumento de 50% no engajamento dos usuários através de otimização de UX.",
+          title: "Plataformas de Gestão Industrial (Axon):",
+          desc: "Desenvolvi o frontend em SvelteKit do Andon, sistema de alertas e chamados de linha de produção com SSO via Keycloak, e do AxonNext, plataforma mais ampla de gestão industrial cobrindo peças indexadas, desenhos técnicos, impressão de ordens de fabricação, simulações e histórico — ambos com APIs em NestJS.",
         },
       },
       personal: {
